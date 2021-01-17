@@ -37,7 +37,7 @@ While not strictly necessary, I created the **Policy** component as a **function
  It could have been formulated as a fully stateful **class-based** component, or the **api.getPolicy** API call could occur higher up in the application structure eg. the **App** component, with its response passed to a dumb, **stateless** functional Policy component - but I decided, since this API call was to take place after sign-in is successfully completed, it could possibly make more sense if this API call took place in the **Policy** component itself, hence necessitating some use of state. I also wished to demonstrate the use of hooks and my consideration of an example use case for them.
 
 ### Form validation
-For the purposes of demonstrating rudimentary form validation, I made use of the *Formik* and *Yup* libraries - no criteria were specified for valid usernames / passwords for using the API, so some simple and arbitrary conditions have been implemented. A possibly unnecessary step, but there to demonstrate a basic implementation of front-end validation.
+For the purposes of demonstrating rudimentary form validation, I made use of the [Formik](https://formik.org/) and [Yup](https://www.npmjs.com/package/yup) libraries - no criteria were specified for valid usernames / passwords for using the API, so some simple and arbitrary conditions have been implemented. A possibly unnecessary step, but there to demonstrate a basic implementation of front-end validation.
 
 ### API authentication
 While I sought to demonstrate the successful authentication of a dummy user using the **access_token** returned by the API as requested by the challenge, I noticed that the **/policys/details/** API sometimes (seemingly mistakenly?) sent back a response object containing policy data _even when_ the request was sent without an **Authorization** header containing the **access_token**. I checked this multiple times both using my app, by making a **cURL** API request in the terminal, and by making an API request using [Insomnia](https://insomnia.rest) REST client containing the headers specified in the challenge description - the result was the same in all instances.
@@ -45,11 +45,11 @@ While I sought to demonstrate the successful authentication of a dummy user usin
 It was not specified in the challenge description to persist a user's authentication across sessions - given more time, I would have made use of the browser **localStorage** object, setting the returned access and refresh tokens and specifying an expiration date as necessary.
 
 ### Estimated time to complete challenge
-* I allowed myself 
+* I allowed myself a total of roughly **3 - 4** hours:
   - *one* hour for project configuration, set-up and structuring
   - *one* hour for creation of the **Sign In** page and form functionality
   - *one* hour for creation of the **Policy** page and manual testing of the application's functionality
-  - additional time for experimenting with styling and refactoring, for a total of roughly **3 - 4** hours.
+  - additional time for experimenting with styling and refactoring
 
 ## Technologies used
 * [React.js](https://reactjs.org/) - application
