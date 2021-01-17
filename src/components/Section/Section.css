@@ -1,0 +1,74 @@
+.Section {
+  text-align: left;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  font-weight: 100;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.Section p {
+  margin: 0;
+  padding: 0;
+}
+
+.sectionHeading {
+  background: linear-gradient(to right, #EB7077 10%, 80%, #efd7d9 100%);
+}
+
+.sectionHeading h3 {
+  color: white;
+  font-size: var(--SectionHeadingH3FontSize);
+  padding: var(--SectionHeadingH3Padding);
+  margin: 0px;
+  font-weight: 600;
+}
+
+.sectionDetails {
+  padding: var(--SectionDetailsPadding);
+}
+
+.sectionDetails p {
+  font-size: var(--SectionDetailsPFontSize);
+  color: #EB7077;
+  font-weight: 300;
+}
+
+.sectionDetails .subheading {
+  color: #bc5b60;
+  font-weight: 500;
+}
+
+.detailsContainer-1 {
+  margin: var(--DetailsContainer1Margin); 
+}
+
+.detailsContainer-2 {
+  margin: 10px; 
+}
+
+.detailsContainer-2 p {
+font-size: var(--DetailsContainer2PFontSize);
+color: rgb(103, 103, 103);
+}
+
+.detailsContainer-2 .subheading {
+  color: rgb(81, 81, 81);
+}
+
+.detailsContainer-3 {
+  margin: var(--DetailsContainer3Margin); 
+}
+
+.subheading {
+  font-weight: 400;
+}
+
+.convictionsClaimsBox {
+  border: 1px solid white;
+  background-color: rgb(236, 236, 236);
+  border-bottom: 1px solid rgb(190, 190, 190);
+  border-right: 1px solid  rgb(190, 190, 190);
+  border-radius: 4px;
+}

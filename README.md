@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# By Bits Code Challenge (By Miles)🚗
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React application that allows users to login to an account then retrieve and view policy information. Data served by the By Bit mock [Policy API](https://api.bybits.co.uk/).
+
+## Getting started
+
+Fork and clone this project to your local machine, and once in the directory run `npm install` from your terminal.
+
+### Prerequisites
+
+The latest version of [Node.js](https://nodejs.org/).
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Instructions for use (example user flow)
 
-### `yarn test`
+* With the project running locally, navigate your browser to the front end of this project at https://localhost:3000.
+* Enter a dummy username and password - for the purposes of this app, these can be anything.
+* When the form validation conditions are met, click the **Sign In** button to 'login' and proceed to the **/policy** page, where your policy information will be displayed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Notes
 
-### `yarn build`
+### Styling
+* There look to be some properties on the response body sent from the API that might, in some potential real-life use cases, benefit from being styled dynamically - hence the **determineIfArrOrObj** and similar functions in **Section.js**, and the splitting of **Policy** component into **Section** components. This is to allow for any possible restructuring of the data returned by the API in the future, should the need for more deeply-nested properties on the response object arise. My code assigns unique classnames for the html elements to be dynamically generated, and thus styled according to any front-end dev requirements. For now these are just based on the depth of nesting in the response object, whether or not the value of a given object property is an array or object etc. While the styling of the **Section** component could have been simplified or even hard-coded for this single instance of an API response, I wished to demonstrate the ability to render the data dynamically.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Use of React hooks (vs. dummy functional components or class-based components)
+* While not strictly necessary, I created the **Policy** component as a **functional** React component making use of the **useState** and **useEffect** hooks - this is a lightweight component that, while making use of state, only needs the componentDidMount / componentDidUpdate lifecycle methods. This seemed like a good use case for hooks, to keep the component lean. It could have been formulated as a fully stateful **lass-based** component, or the api.getPolicy API call could occur higher up in the application structure eg. the **App** component, with its response passed to a dumb, **stateless** functional Policy component - but I decided, since this API call was to take place after sign-in is successfully completed, it could possibly make more sense if this api took place in the Policy component itself, hence necessitating some use of state. I also wished to demonstrate the use of hooks and my consideration of an example use case for them.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Form validation
+* For the purposes of demonstrating rudimentary form validation, I made use of the *Formik* and *Yup* libraries - no criteria were specified for valid usernames / passwords for using the API, so some simple and arbitrary conditions have been implemented. A possibly unnecessary step, but there to demonstrate a basic implementation of front-end validation.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### API authentication
+* While I sought to demonstrate the successful authentication of a dummy user using the **access_token** returned by the API as requested by the challenge, I noticed that the **/policys/details/** API sometimes (seemingly mistakenly?) sent back a response object containing policy data _even when_ the request was sent without an **Authorization** header containing the **access_token** returned from the **/auth/token** request. I checked this multiple times both using my app, by making a **cURL** API request in the terminal, and by making an API request using [Insomnia](https://insomnia.rest) REST client containing the headers specified in the challenge description.
+* It was not specified in the challenge description to persist a user's authentication across sessions - given more time, I would have made use of the browser **localStorage** object, setting the returned access and refresh tokens and specifying an expiration date as necessary.
 
-### `yarn eject`
+### Estimated time to complete challenge
+* I allowed myself 
+  - *one* hour for project configuration, set-up and structuring
+  - *one* hour for creation of the *Sign In* page and form functionality
+  - *one* hour for creation of the *Policy* page and manual testing of the application's functionality
+  - additional time for experimenting with styling and refactoring, for a total of roughly *3 - 4* hours.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Technologies used
+* [React.js]() - application
+* [Reach Router]() - routing
+* [Formik]() and [Yup]() - form validation

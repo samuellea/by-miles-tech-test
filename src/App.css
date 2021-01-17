@@ -1,38 +1,70 @@
+:root {
+  --h1FontSize: 75px;
+  --h1Margin: 20px 0px 20px 15px;
+  --LogInFormWidth: 100%;
+  --LogInLabelFontSize: 20px;
+  --LogInLabelPadding: 10px 0px;
+  --LogInInputHeight: 30px;
+  --LogInInputFontSize: 22px;
+  --LogInInputMarginBottom: 20px;
+  --InputFeedbackMarginBottom: 20px;
+  --InputFeedbackMarginTop: -15px;
+  --SignInButtonFontSize: 22px;
+  
+  --PolicyWidth: 75vw;
+  --SectionHeadingH3FontSize: 35px;
+  --SectionHeadingH3Padding: 5px 20px;
+  --SectionDetailsPadding: 0px;
+  --SectionDetailsPFontSize: 22px;
+  --DetailsContainer1Margin: 20px;
+  --DetailsContainer2Padding: 0px 25px;
+  --DetailsContainer2PFontSize: 18px;
+  --DetailsContainer3Margin: 10px;
+}
+
+@media (max-width: 479px) {
+  :root {
+  --h1FontSize: 55px;
+  --h1Margin: 20px 0px 20px 10px;
+  --LogInFormWidth: 80%;
+  --LogInLabelFontSize: 16px;
+  --LogInLabelPadding: 2px 0px;
+  --LogInInputHeight: 20px;
+  --LogInInputFontSize: 16px;
+  --LogInInputMarginBottom: 10px;
+  --InputFeedbackMarginBottom: 0px;
+  --InputFeedbackMarginTop: -5px;
+  --SignInButtonFontSize: 16px;
+
+  --PolicyWidth: 90vw;
+  --SectionHeadingH3FontSize: 25px;
+  --SectionHeadingH3Padding: 5px 10px;
+  --SectionDetailsPadding: 10px;
+  --SectionDetailsPFontSize: 16px;
+  --DetailsContainer1Margin: 10px;
+  --DetailsContainer2Padding: 0px 5px;
+  --DetailsContainer2PFontSize: 15px;
+  --DetailsContainer3Margin: 5px 5px 5px 10px;
+  }
+}
+
+
 .App {
-  text-align: center;
+  /* text-align: center; */
+  font-family: 'Work Sans', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Router {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  display: inline-block;
+  margin: var(--h1Margin);
+  font-weight: 100;
+  font-size: var(--h1FontSize);
+  color: #EB7077;
 }

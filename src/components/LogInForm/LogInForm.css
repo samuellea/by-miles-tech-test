@@ -1,0 +1,73 @@
+.LogInForm {
+  width: var(--LogInFormWidth);
+}
+
+.formTitleContainer {
+  width: 100%;
+  text-align: center;
+}
+
+.formTitleContainer h1 {
+  text-align: center;
+  display: inline-block;
+  padding-bottom: 15px;
+  box-shadow: 0px 12px 10px -15px #ec989c;  
+}
+
+form {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 5%;
+}
+
+label,
+input {
+  display: block;
+  width: 100%;
+  max-width: 93%;
+}
+
+label {
+  height: 22px;
+  color: #EB7077;
+  font-size: var(--LogInLabelFontSize);
+  padding: var(--LogInLabelPadding);
+}
+
+input {
+  margin-bottom: var(--LogInInputMarginBottom);
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #777;
+  height: var(--LogInInputHeight);
+  font-size: var(--LogInInputFontSize);
+}
+
+input.error {
+  border: 1px solid red !important;
+}
+
+.input-feedback {
+  color: rgb(235, 54, 54);
+  margin-top: var(--InputFeedbackMarginTop);
+  font-size: 14px;
+  margin-bottom: var(--InputFeedbackMarginBottom);
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  font-size: var(--SignInButtonFontSize);
+  background-color: #EB7077;
+  color: white;
+  border: 1px solid #ef8e93;
+  background-color: 250ms;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #EB7077;
+}
