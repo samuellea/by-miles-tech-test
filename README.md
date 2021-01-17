@@ -1,4 +1,4 @@
-# By Bits Code Challenge (By Miles)🚗
+# By Bits Code Challenge (By Miles) 🚗
 
 A simple React application that allows users to login to an account then retrieve and view policy information. Data served by the By Bit mock [Policy API](https://api.bybits.co.uk/).
 
