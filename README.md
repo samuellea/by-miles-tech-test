@@ -52,6 +52,6 @@ It was not specified in the challenge description to persist a user's authentica
   - additional time for experimenting with styling and refactoring
 
 ## Technologies used
-* [React.js](https://reactjs.org/) - application
+* [React.js](https://reactjs.org/), initialized with [Create React App](https://github.com/facebook/create-react-app) - application
 * [Reach Router](https://reach.tech/router/) - routing
 * [Formik](https://formik.org/) and [Yup](https://www.npmjs.com/package/yup) - form validation
