@@ -21,7 +21,7 @@ Runs the app in development mode. Open [http://localhost:3000](http://localhost:
 ## Instructions for use (example user flow)
 
 * With the project running locally, navigate your browser to the front end of this project at https://localhost:3000.
-* Enter a dummy username and password - for the purposes of this app, these can be anything.
+* Enter a dummy username and password - for the purposes of this app, these can be anything, eg. username: `testuser`, password: `password123`.
 * When the form validation conditions are met, click the **Sign In** button to 'login' and proceed to the **/policy** page, where your policy information will be displayed.
 
 ## Notes
