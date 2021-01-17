@@ -47,6 +47,6 @@ Runs the app in development mode. Open [http://localhost:3000](http://localhost:
   - additional time for experimenting with styling and refactoring, for a total of roughly *3 - 4* hours.
 
 ## Technologies used
-* [React.js]() - application
-* [Reach Router]() - routing
-* [Formik]() and [Yup]() - form validation
+* [React.js](https://reactjs.org/) - application
+* [Reach Router](https://reach.tech/router/) - routing
+* [Formik](https://formik.org/) and [Yup](https://www.npmjs.com/package/yup) - form validation
